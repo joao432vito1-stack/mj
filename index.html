@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cofre de Jogos</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #020617;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  color: #a855f7;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero span {
+  color: #a855f7;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background: #0f172a;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #9333ea;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎮 Jogo Cofre</div>
+  <div>Catálogo</div>
+</header>
+
+<section class="hero">
+  <h1><span>Cofre</span> de Jogos</h1>
+  <p>Descubra e explore os melhores títulos</p>
+</section>
+
+<section class="grid">
+
+  <div class="card" onclick="abrir('https://google.com')">
+    <img src="https://via.placeholder.com/300x150">
+    <div class="tag">RPG</div>
+    <div class="card-content">
+      <p>Jogo Exemplo</p>
+      ↗
+    </div>
+  </div>
+
+  <div class="card" onclick="abrir('https://youtube.com')">
+    <img src="https://via.placeholder.com/300x150">
+    <div class="tag">Ação</div>
+    <div class="card-content">
+      <p>Outro Jogo</p>
+      ↗
+    </div>
+  </div>
+
+</section>
+
+<script>
+function abrir(link){
+  window.location.href = link;
+}
+</script>
+
+</body>
+</html>
